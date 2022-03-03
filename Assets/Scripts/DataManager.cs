@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
-    public DataManager Instance;
+    public static DataManager Instance;
 
-    public InputField nameInput;
+    public static string playerName;
+    public static string bestPlayerName;
+    public static int bestScore;
 
     private void Awake()
     {
@@ -20,5 +22,25 @@ public class DataManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        if (playerName == null)
+        {
+            playerName = "Player";
+        }
+
+        if (bestPlayerName == null)
+        {
+            bestPlayerName = "John";
+        }
+
+        if (bestScore == 0)
+        {
+            bestScore = 10;
+        }
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
