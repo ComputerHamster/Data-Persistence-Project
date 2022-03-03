@@ -18,7 +18,19 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
-    
+    public MainManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
