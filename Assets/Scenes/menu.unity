@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac3896a652d75c439eba9b9b0b2505f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameInputText: {fileID: 1998625217}
 --- !u!4 &1058670101
 Transform:
   m_ObjectHideFlags: 0
@@ -550,7 +551,7 @@ GameObject:
   - component: {fileID: 1180286365}
   - component: {fileID: 1180286364}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: NameInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

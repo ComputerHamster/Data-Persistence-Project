@@ -12,6 +12,8 @@ public class DataManager : MonoBehaviour
     public static string bestPlayerName;
     public static int bestScore;
 
+    public Text nameInputText;
+
     private void Awake()
     {
         if (Instance != null)
@@ -41,6 +43,8 @@ public class DataManager : MonoBehaviour
 
     public void StartGame()
     {
+        playerName = nameInputText.text;
         SceneManager.LoadScene(1);
+        //Debug.Log(playerName);
     }
 }
