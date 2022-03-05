@@ -71,5 +71,18 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+
+        if (m_Points > DataManager.bestScore)
+        {
+            //Debug.Log(DataManager.playerName);
+            //Debug.Log(DataManager.bestPlayerName);
+            DataManager.bestScore = m_Points;
+            //Debug.Log(DataManager.playerName);
+            //Debug.Log(DataManager.bestPlayerName);
+            DataManager.bestPlayerName = DataManager.playerName;
+            FindObjectOfType<BestScoreText>().ShowBestScore();
+        }
+
+        DataManager.SaveBestScore();
     }
 }

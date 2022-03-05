@@ -9,6 +9,11 @@ public class BestScoreText : MonoBehaviour
 
     private void Awake()
     {
+        ShowBestScore();
+    }
+
+    public void ShowBestScore()
+    {
         bestScoreText.text = "Best score: " + DataManager.bestPlayerName + ": " + DataManager.bestScore;
     }
 }
